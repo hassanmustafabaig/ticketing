@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "ee2851ad-b764-4852-bed0-662c3e6d5169",
+		"name": "Ticketing Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Delivery -> get all deliveries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBQ25kZDlLUFFPZ0l0cDFsYnItYWxnSE5OdFRtSXVlUjRveDEtWm1TTFpZIn0.eyJleHAiOjE2Mzk5MjcxMDEsImlhdCI6MTYzOTkyNjgwMSwianRpIjoiNmJmZTgwZDYtNWFkZC00ZTc5LWEzMjItNjk1ZjBkMGRhY2ExIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL2xvY2FsLW1hc3Rlci1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI5NjFlZDRiMy03MzhhLTQ0NTUtOTIyOC1iMDlkMzhmY2UyMmYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWNrZXRpbmctYmUtYXBwbGljYXRpb24iLCJzZXNzaW9uX3N0YXRlIjoiMjdkODVjODMtYmIwMy00ZDY2LWJiNDItMzc1OGY5ZjZmYWVlIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODUiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbG9jYWwtbWFzdGVyLXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJPcmRlcl9NYW5hZ2VyIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ0aWNrZXRpbmctYmUtYXBwbGljYXRpb24iOnsicm9sZXMiOlsiT3JkZXJfTWFuYWdlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiMjdkODVjODMtYmIwMy00ZDY2LWJiNDItMzc1OGY5ZjZmYWVlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiZmlyc3QgbmFtZSBsYXN0IG5hbWUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJvcmRlci5tYW5hZ2VyQHRpY2tldGluZy5jb20iLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwiZW1haWwiOiJvcmRlci5tYW5hZ2VyQHRpY2tldGluZy5jb20ifQ.cfl3LeI-kI65YjLkVnb0s19pVRCU7VT3fah93XECDtqqHu8s8z630pEBeZB8rEFc_S_ye6U7izOYkCA_1_CtwNtqFT4Ljv7Ux4t84gn6nsIKjyQCpkjIYDVUNHDEYPiIGkd8XUe3FC5kkA7r3mVRU7WFf1Fp_F_WAazdEhluvIZJdrguNSv8M0uxaRy5lnSzZqjxxd8DQByhCz1iKNM4A6viFgZB7_JSc61ELBWQTb_arH0LENxdo97k-h4q5tLt3T2GeR8b-XOnxNcuEE4T3Vub06Ly727T5EZWyeszRT14RVi_iwsi9m2tHauiE3zE_3qhifFFLmYW91nneNlTyg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/delivery/get-all",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"delivery",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create ticketing agent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"ta\",\n    \"email\": \"ticketing.agent@ticketing.com\",\n    \"password\": \"12345\",\n    \"firstname\": \"first name\",\n    \"lastname\": \"last name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user/create-ticket-agent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user",
+								"create-ticket-agent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"om\",\n    \"email\": \"order.manager@ticketing.com\",\n    \"password\": \"12345\",\n    \"firstname\": \"first name\",\n    \"lastname\": \"last name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/user/create-order-manager",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"user",
+								"create-order-manager"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "Get all tickets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJBQ25kZDlLUFFPZ0l0cDFsYnItYWxnSE5OdFRtSXVlUjRveDEtWm1TTFpZIn0.eyJleHAiOjE2Mzk5MjU3NzYsImlhdCI6MTYzOTkyNTQ3NiwianRpIjoiZGM4OWIxMDgtNjk0ZC00NWY0LWJiY2EtYjRhZWViNWExYTQ5IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL2xvY2FsLW1hc3Rlci1yZWFsbSIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI5NjFlZDRiMy03MzhhLTQ0NTUtOTIyOC1iMDlkMzhmY2UyMmYiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWNrZXRpbmctYmUtYXBwbGljYXRpb24iLCJzZXNzaW9uX3N0YXRlIjoiNmZmODU0MjQtYmMzNy00YWMyLWIwMTYtNTI1ZjgxNTZjOTFmIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODUiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImRlZmF1bHQtcm9sZXMtbG9jYWwtbWFzdGVyLXJlYWxtIiwib2ZmbGluZV9hY2Nlc3MiLCJPcmRlcl9NYW5hZ2VyIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ0aWNrZXRpbmctYmUtYXBwbGljYXRpb24iOnsicm9sZXMiOlsiT3JkZXJfTWFuYWdlciJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwic2lkIjoiNmZmODU0MjQtYmMzNy00YWMyLWIwMTYtNTI1ZjgxNTZjOTFmIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiZmlyc3QgbmFtZSBsYXN0IG5hbWUiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJvcmRlci5tYW5hZ2VyQHRpY2tldGluZy5jb20iLCJnaXZlbl9uYW1lIjoiZmlyc3QgbmFtZSIsImZhbWlseV9uYW1lIjoibGFzdCBuYW1lIiwiZW1haWwiOiJvcmRlci5tYW5hZ2VyQHRpY2tldGluZy5jb20ifQ.dCtKEJ5OmR6geVekW1uATYchpVLvSzDy8-fd2TcLaI6cEuRTowwmM2f9BUCK82RFxoH-27EQkhcWAjBBEv085ctXxxrgQONbVNOnhmfLriPhixqp-iMNXbWoaNgGSejHil1Nl_jT3_CZX-uBkD9rhUcmmdWlzYe4HKVn3NkRHp8FL7l9hFoaH6mkyHRHkFE3PE3CIO7tdNPOSuNriTmWLDs3WV3WF6Sexko7AkkLFyJnzACfV8pcvXVfTK-Ff8gwqmL7_0pN6bX28SAdaZUruPull3rezq1d5D_eUpwIVJcZNXgtnYlA8y-Z98jL8xf8oiMo8Fwvlti091QmVjiS9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{host}}:{{port}}/ticket/get-all",
+							"protocol": "http",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"ticket",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -7,9 +7,9 @@ public class GlobalConstant {
     public static final String AUTH_SERVER_URL = "http://localhost:8080/auth";
     public static final String AUTH_SERVER_REALM = "local-master-realm";
     public static final String CLIENT_ID = "ticketing-be-application";
-    public static final String CLIENT_SECRET = "PR9z9Zy5DmtqJwK2cIWa60bp4oT2zrhi";
+    public static final String CLIENT_SECRET = "wco2o4AUjoTnorz6XtM2LlosbrGgwjmV";
     public static final String CONSOLE_USERNAME = "admin";
-    public static final String CONSOLE_PASSWORD = "admin123$";
+    public static final String CONSOLE_PASSWORD = "admin123";
 
     // user roles
     public static final String ROLE_ORDER_MANAGER = "Order_Manager";
